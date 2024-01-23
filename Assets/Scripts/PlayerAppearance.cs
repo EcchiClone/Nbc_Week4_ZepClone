@@ -2,11 +2,17 @@
 
 public class PlayerAppearance : MonoBehaviour
 {
-    public SpriteRenderer mainSpriteRenderer; // MainSprite 오브젝트의 SpriteRenderer
+    public SpriteRenderer mainSpriteRenderer;
+    public Animator animator;
 
-    // 플레이어 외형을 설정하는 메서드
+    // 플레이어 외형을 설정
     public void SetAppearance(Sprite newAppearance)
     {
         mainSpriteRenderer.sprite = newAppearance;
+    }
+    // 플레이어 애니메이션 설정
+    public void SetAnimation(int CharacterNum)
+    {
+        animator.SetInteger("CharacterNum", CharacterNum);
     }
 }
