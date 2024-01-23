@@ -54,14 +54,6 @@ public class GameManager : MonoBehaviour
 
         player.SetActive(true);
 
-        // 플레이어 외형 설정
-        Sprite selectedSprite = characterAppearance.GetSelectedSprite();
-        playerAppearance.SetAppearance(selectedSprite);
-
-        // 플레이어 애니메이션 설정
-        int CharacterNum = characterAppearance.GetSelectedAppearance();
-        playerAppearance.SetAnimation(CharacterNum);
-
         string playerName = nameInputField.text; // 플레이어 이름 가져오기
         playerNameDisplay.SetPlayerName(playerName); // 이름 설정
     }
